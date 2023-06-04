@@ -1,3 +1,6 @@
+// Components
+import { Header } from '@/components'
+
 // Styles
 import './globals.css'
 import { Nunito } from 'next/font/google'
@@ -8,7 +11,7 @@ import { Metadata } from 'next'
 const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Reactify',
+  title: 'Reactify.',
   description:
     'Reactify is a blog focused on Javascript and Web Development technologies.'
 }
@@ -20,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>{children}</body>
+      <body className={`${nunito.className} bg-zinc-100 text-zinc-800`}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
