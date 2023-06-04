@@ -1,4 +1,10 @@
-const MOCK_POSTS = [
+// Components
+import { PostCard, RecentPosts, Categories } from '@/components'
+
+// Types
+import { Post } from '@/types/Post'
+
+const MOCK_POSTS: Post[] = [
   { title: 'Learn React', excerpt: 'Learning React with NextJS' },
   {
     title: 'Learn React with Tailwind CSS',
@@ -12,22 +18,14 @@ export default function Home() {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <section className="col-span-1 lg:col-span-8" aria-label="posts">
           {MOCK_POSTS.map((post, index) => (
-            <article key={index}>
-              <h2>{post.title}</h2>
-              <p>{post.excerpt}</p>
-            </article>
+            <PostCard key={index} post={post} />
           ))}
         </section>
 
         <aside className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">
-            <section aria-label="recent posts">
-              <h2>Recent Posts</h2>
-            </section>
-
-            <section aria-label="categories">
-              <h2>Categories</h2>
-            </section>
+            <RecentPosts />
+            <Categories />
           </div>
         </aside>
       </div>

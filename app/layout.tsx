@@ -8,8 +8,9 @@ import { Metadata } from 'next'
 const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Reactify Blog',
-  description: 'Reactify is a blog focused on ReactJS and Web Development.'
+  title: 'Reactify',
+  description:
+    'Reactify is a blog focused on Javascript and Web Development technologies.'
 }
 
 export default function RootLayout({
