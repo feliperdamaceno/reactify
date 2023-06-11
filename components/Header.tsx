@@ -18,7 +18,10 @@ export default function Header() {
         />
       </Link>
 
-      <nav className="flex items-center gap-4 font-semibold">
+      <nav
+        className="flex items-center gap-4 font-semibold"
+        aria-label="header links"
+      >
         <a
           className="px-3 font-semibold py-1.5 drop-shadow-sm"
           href="https://github.com/feliperdamaceno"

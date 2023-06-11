@@ -12,6 +12,6 @@ const MOCK_POSTS: Post[] = [
   }
 ]
 
-export default function Home() {
+export default function HomePage() {
   return <PostList posts={MOCK_POSTS} />
 }

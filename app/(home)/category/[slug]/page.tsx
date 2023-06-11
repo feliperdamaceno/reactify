@@ -4,11 +4,11 @@ import { PostList } from '@/components'
 // Types
 import { Post } from '@/types/Post'
 
-interface CategoryProps {
+interface CategoryPageProps {
   params: { slug: string }
 }
 
-export default function Category({ params }: CategoryProps) {
+export default function CategoryPage({ params }: CategoryPageProps) {
   const MOCK_CATEGORY_POSTS: Post[] = [
     { title: params.slug, excerpt: `Learning ${params.slug}` },
     {

@@ -1,5 +1,5 @@
 // Components
-import { Header, Hero, PostWidget, CategoryWidget } from '@/components'
+import { Header, Hero, PostWidget, CategoriesNav } from '@/components'
 
 // Styles
 import '../globals.css'
@@ -29,13 +29,13 @@ export default function HomeLayout({
         <Header />
         <main className="container px-8 mx-auto mb-8 sm:px-10">
           <Hero />
+          <CategoriesNav />
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
             {children}
 
             <aside className="col-span-1 lg:col-span-4">
               <div className="relative lg:sticky top-8">
                 <PostWidget type="Recent Posts" />
-                <CategoryWidget />
               </div>
             </aside>
           </div>
