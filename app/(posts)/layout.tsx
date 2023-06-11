@@ -2,7 +2,7 @@
 import { Header } from '@/components'
 
 // Styles
-import './globals.css'
+import '../globals.css'
 import { Nunito } from 'next/font/google'
 
 // Types
@@ -16,14 +16,16 @@ export const metadata: Metadata = {
     'Reactify is a blog focused on Javascript and Web Development technologies.'
 }
 
-export default function RootLayout({
+export default function PostsLayout({
   children
 }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} bg-zinc-100 text-zinc-800`}>
+      <body
+        className={`${nunito.className} bg-zinc-50 text-zinc-800 selection:bg-emerald-400 selection:text-white`}
+      >
         <Header />
         {children}
       </body>

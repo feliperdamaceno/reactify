@@ -2,15 +2,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-// Styles
+// Images
 import Logo from '@/public/reactify_logo.png'
 
 export default function Header() {
   return (
-    <header className="container flex items-center justify-between gap-4 px-8 pt-8 mx-auto sm:px-10">
+    <header className="container flex items-center justify-between gap-4 px-8 pt-8 mx-auto sm:px-10 ">
       <Link href="/">
         <Image
-          className="w-10 p-1 sm:w-12 drop-shadow-sm"
+          className="w-10 p-1 select-none sm:w-12 drop-shadow-sm"
           src={Logo}
           width={50}
           height={50}
