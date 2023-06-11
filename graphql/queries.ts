@@ -6,6 +6,7 @@ export const GetPostsQuery = gql`
       edges {
         node {
           id
+          slug
           title
           excerpt
           createdAt

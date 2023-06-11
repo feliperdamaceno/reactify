@@ -30,7 +30,7 @@ export default function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`${nunito.className} bg-zinc-50 text-zinc-800 selection:bg-emerald-400 selection:text-white`}
+        className={`${nunito.className} bg-zinc-100 text-zinc-800 selection:bg-emerald-400 selection:text-white`}
       >
         <Header />
         <main className="container px-8 mx-auto mb-8 sm:px-10">

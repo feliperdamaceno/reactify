@@ -1,5 +1,9 @@
 'use client'
 
+// Components
+import { Button } from '@/components'
+
+// Hooks
 import { useEffect } from 'react'
 
 interface HomeErrorProps {
@@ -14,12 +18,14 @@ export default function HomeError({ error, reset }: HomeErrorProps) {
   return (
     <div aria-label="error page">
       <h1 className="mb-2">Something went wrong :(</h1>
-      <button
-        className="px-3 font-semibold rounded-sm shadow-sm bg-emerald-500 text-zinc-50 py-1.5"
-        onClick={reset}
-      >
-        Try Again
-      </button>
+      <Button
+        type="regular"
+        render={(styles) => (
+          <button className={styles} onClick={reset}>
+            Try Again
+          </button>
+        )}
+      />
     </div>
   )
 }

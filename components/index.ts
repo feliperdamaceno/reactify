@@ -1,5 +1,6 @@
 // Utility Components
 export { default as List } from '@/components/List'
+export { default as Button } from '@/components/Button'
 
 // Layout Components
 export { default as Header } from '@/components/Header'

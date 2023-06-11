@@ -16,6 +16,7 @@ export type Author = {
 
 export type Post = {
   id: string
+  slug: string
   title: string
   excerpt: string
   createdAt: string

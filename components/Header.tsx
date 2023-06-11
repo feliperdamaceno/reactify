@@ -1,4 +1,5 @@
 // Components
+import { Button } from '@/components'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -7,7 +8,7 @@ import Logo from '@/public/reactify_logo.png'
 
 export default function Header() {
   return (
-    <header className="container flex items-center justify-between gap-4 px-8 pt-8 mx-auto sm:px-10 ">
+    <header className="container flex items-center justify-between gap-4 px-8 pt-8 mx-auto sm:px-10">
       <Link href="/">
         <Image
           className="w-10 p-1 select-none sm:w-12 drop-shadow-sm"
@@ -22,20 +23,27 @@ export default function Header() {
         className="flex items-center gap-4 font-semibold"
         aria-label="header links"
       >
-        <a
-          className="px-3 font-semibold py-1.5 drop-shadow-sm"
-          href="https://github.com/feliperdamaceno"
-          target="_blank"
-        >
-          GitHub
-        </a>
+        <Button
+          type="transparent"
+          render={(styles) => (
+            <a
+              className={styles}
+              href="https://github.com/feliperdamaceno"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          )}
+        />
 
-        <Link
-          className="px-3 font-semibold rounded-sm shadow-sm bg-emerald-500 text-zinc-50 py-1.5"
-          href="/contact"
-        >
-          Contact Me
-        </Link>
+        <Button
+          type="regular"
+          render={(styles) => (
+            <Link className={styles} href="/contact">
+              Contact Me
+            </Link>
+          )}
+        />
       </nav>
     </header>
   )
