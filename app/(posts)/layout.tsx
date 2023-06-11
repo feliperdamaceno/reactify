@@ -2,7 +2,7 @@
 import { Header } from '@/components'
 
 // Styles
-import '../globals.css'
+import '@/app/globals.css'
 import { Nunito } from 'next/font/google'
 
 // Types
@@ -11,16 +11,16 @@ import { Metadata } from 'next'
 const nunito = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Reactify.',
+  title: 'Posts',
   description:
     'Reactify is a blog focused on Javascript and Web Development technologies.'
 }
 
-export default function PostsLayout({
-  children
-}: {
+interface PostsLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function PostsLayout({ children }: PostsLayoutProps) {
   return (
     <html lang="en">
       <body

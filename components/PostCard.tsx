@@ -1,5 +1,5 @@
 // Types
-import { Post } from '@/types/Post'
+import { Post } from '@/types'
 
 interface PostCardProps {
   post: Post

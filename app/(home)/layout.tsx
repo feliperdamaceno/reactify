@@ -1,8 +1,14 @@
 // Components
-import { Header, Hero, PostWidget, CategoriesNav } from '@/components'
+import {
+  Header,
+  Hero,
+  PostWidget,
+  CategoriesWidget,
+  CategoriesNav
+} from '@/components'
 
 // Styles
-import '../globals.css'
+import '@/app/globals.css'
 import { Nunito } from 'next/font/google'
 
 // Types
@@ -16,11 +22,11 @@ export const metadata: Metadata = {
     'Reactify is a blog focused on Javascript and Web Development technologies.'
 }
 
-export default function HomeLayout({
-  children
-}: {
+interface HomeLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function HomeLayout({ children }: HomeLayoutProps) {
   return (
     <html lang="en">
       <body
@@ -31,11 +37,12 @@ export default function HomeLayout({
           <Hero />
           <CategoriesNav />
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-            {children}
+            <section className="col-span-1 lg:col-span-8">{children}</section>
 
             <aside className="col-span-1 lg:col-span-4">
               <div className="relative lg:sticky top-8">
                 <PostWidget type="Recent Posts" />
+                <CategoriesWidget />
               </div>
             </aside>
           </div>

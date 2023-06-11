@@ -1,8 +1,8 @@
 // Components
-import { PostList } from '@/components'
+import { List, PostCard } from '@/components'
 
 // Types
-import { Post } from '@/types/Post'
+import { Post } from '@/types'
 
 interface CategoryPageProps {
   params: { slug: string }
@@ -17,5 +17,10 @@ export default function CategoryPage({ params }: CategoryPageProps) {
     }
   ]
 
-  return <PostList posts={MOCK_CATEGORY_POSTS} />
+  return (
+    <List
+      items={MOCK_CATEGORY_POSTS}
+      render={(post) => <PostCard key={post.id} post={post} />}
+    />
+  )
 }
